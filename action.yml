@@ -1,0 +1,14 @@
+name: 'Hello Action'
+description: 'Complete some task'
+inputs:
+  what-to-do:  # id of input
+    description: 'What to Do'
+    required: true
+    default: 'Config custom/private package Repo'
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/config.sh
+      shell: bash
+    - run: ${{ github.action_path }}/goodbye.sh
+      shell: bash
