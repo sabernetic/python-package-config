@@ -3,7 +3,7 @@ description: 'Complete some task'
 inputs:
   what-to-do:  # id of input
     description: 'What to Do'
-    required: true
+    required: false
     default: 'Config custom/private package Repo'
 runs:
   using: "composite"
