@@ -1,5 +1,5 @@
-name: 'Hello Action'
-description: 'Complete some task'
+name: "Install Python Packages"
+description: "Install python packages"
 inputs:
   aws-account-id:
     description: "AWS Account ID"
