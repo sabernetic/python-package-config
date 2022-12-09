@@ -1,5 +1,5 @@
 name: "Install Python Packages"
-description: "Install python packages from CodeArtifact"
+description: "Install python packages from CodeArtifact and requirements.txt"
 inputs:
   aws-account-id:
     description: "AWS Account ID"
