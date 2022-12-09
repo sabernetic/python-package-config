@@ -16,5 +16,4 @@ do
   install_cmd="$install_cmd --extra-index-url https://aws:$CODEARTIFACT_AUTH_TOKEN@$domain-$acc_id.d.codeartifact.$region.amazonaws.com/pypi/$repo/simple/"
 done
 
-echo $install_cmd
 $install_cmd
