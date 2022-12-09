@@ -4,9 +4,8 @@ inputs:
   what-to-do:  # id of input
     description: 'What to Do'
     required: false
-    default: 'Config custom/private package Repo'
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/config.sh
+    - run: ${{ github.action_path }}/config.sh ${{ inputs.what-to-do }}
       shell: bash
