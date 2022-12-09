@@ -16,5 +16,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/config.sh ${{ inputs.aws-account-id }} ${{ inputs.aws-region }} ${{ inputs.domain }} ${{ inputs.repos }}
+    - run: ${{ github.action_path }}/config.sh ${{ inputs.aws-account-id }} ${{ inputs.aws-region }} ${{ inputs.domain }} "${{ inputs.repos }}"
       shell: bash
