@@ -1,10 +1,10 @@
 name: "Install Python Packages"
 description: "Install python packages from requirements.txt. index CodeArtifact"
 inputs:
-  aws-account-id:
+  aws_account_id:
     description: "AWS Account ID"
     required: false
-  aws-region:
+  aws_region:
     description: "AWS Region"
     required: false
   domain:
@@ -16,5 +16,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/config.sh ${{ inputs.aws-account-id }} ${{ inputs.aws-region }} ${{ inputs.domain }} "${{ inputs.repos }}"
+    - run: ${{ github.action_path }}/config.sh ${{ inputs.aws_account_id }} ${{ inputs.aws_region }} ${{ inputs.domain }} "${{ inputs.repos }}"
       shell: bash
