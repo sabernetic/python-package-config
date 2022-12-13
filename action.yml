@@ -1,20 +1,11 @@
 name: "Install Python Packages"
-description: "Install python packages from requirements.txt. index CodeArtifact"
+description: "Install python packages from requirements.txt reference Sabernetic Github"
 inputs:
-  aws-account-id:
-    description: "AWS Account ID"
-    required: false
-  aws-region:
-    description: "AWS Region"
-    required: false
-  domain:
-    description: "CodeArtifact Domain"
-    required: false
   repos:
-    description: "CodeArtifact Repositories"
+    description: "Github Repository"
     required: false
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/config.sh ${{ inputs.aws-account-id }} ${{ inputs.aws-region }} ${{ inputs.domain }} "${{ inputs.repos }}"
+    - run: ${{ github.action_path }}/config.sh "${{ inputs.repos }}"
       shell: bash
